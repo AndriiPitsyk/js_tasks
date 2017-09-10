@@ -1,15 +1,13 @@
-var a = [3,5,2,1,4,9,12,7];
-var length = a.length;
-
-for (var i = length ; i >= 0; i--) {
-    for (var j = 0; j < length; j++) {
-        if (a[j] > a[j + 1]) {
-            var t = a[j];
-            a[j] = a[j + 1];
-            a[j + 1] = t;
+function array(value){
+  for (var i = value.length-1 ; i >= 0; i--) {
+      for (var j = 0; j < value.length; j++) {
+        if (value[j] > value[j + 1]) {
+          var t = value[j];
+          value[j] = value[j + 1];
+          value[j + 1] = t;
+            }
+            }
         }
-    }
+
+        return value;
 }
-
-console.log(a)
-
